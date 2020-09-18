@@ -1,0 +1,78 @@
+body {
+    background-color: black;
+    padding: 0;
+    margin: 0;
+}
+
+.mainDiv {
+    width: 600px;
+    height: 600px;
+    margin: 0 auto;
+    background-color: cornflowerblue;
+    font-size: 0;
+}
+.mainDiv > div {
+    width: 200px;
+    height: 200px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0;
+    border: 1px solid black;
+
+}
+.RedCircle {
+
+    background-color: red;
+    border-radius: 50%;
+}
+.YellowCircle {
+    background-color: yellow;
+    border-radius: 50%;
+}
+
+.GreenCircle {
+    background-color: green;
+    border-radius: 50%;
+}
+
+.YellowCircle {
+    animation-name: YellowCircle;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-delay: 3s;
+
+    transition-property: transform;
+    transition-duration: 3s; 
+}
+.YellowCircle:hover {
+    transform:rotateY(360deg);
+}
+.GreenCircle {
+    color: white;
+    text-decoration: none;
+    border: 2px solid white;
+    padding: 1rem;
+    margin: 2rem;
+    opacity: 0;
+    animation-name: GreenCircle;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count:infinite;
+}
+@keyframes GreenCircle {
+    0% {opacity: 0}
+    100% {opacity:100}
+}
+.RedCircle {
+    font-size: 3.5rem;
+    line-height: 1.3;
+    position: relative;
+    animation: RedCircle;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes RedCircle {
+    0% {top: -100px}
+    100% {top: 0px}
+}
